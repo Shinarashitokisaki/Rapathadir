@@ -1,7 +1,7 @@
 document.getElementById('attendance-form').addEventListener('submit', function(event) {
 event.preventDefault();
-  const BOT_TOKEN = 'YOUR_BOT_TOKEN';
-  const CHAT_ID = 'YOUR_CHAT_ID';
+  const BOT_TOKEN = '6784104621:AAEVRyReTRmVtL_eGnFIZLbYm3FGkI0zF9M';
+  const CHAT_ID = '7120969628';
   const name = document.getElementById('name').value;
   const department = document.getElementById('department').value;
   const password = document.getElementById('password').value;
