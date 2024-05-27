@@ -70,4 +70,5 @@ button:disabled:hover {
     width: 90%;
   }
 }
-p{
+p{ text-align:center;
+ }
