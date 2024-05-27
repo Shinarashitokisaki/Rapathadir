@@ -5,7 +5,7 @@ document.getElementById('absenForm').addEventListener('submit', function(event) 
     
     // Token Bot Telegram dan ID Chat
     const token = 'YOUR_TELEGRAM_BOT_TOKEN';
-    const chatId = 'YOUR_TELEGRAM_CHAT_ID';
+    const chatId = '7120969628';
     
     // Kirim data ke bot Telegram
     const message = `username=${nama} telah datang rapat jam ${new Date().toLocaleTimeString()}`;
