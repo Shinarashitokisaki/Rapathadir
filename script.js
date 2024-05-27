@@ -1,28 +1,28 @@
-document.getElementById('absenForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const nama = document.getElementById('nama').value;
-    const password = document.getElementById('password').value;
+document.getElementById('attendance-form').addEventListener('submit', function(event) {
+event.preventDefault();
+  const BOT_TOKEN = 'YOUR_BOT_TOKEN';
+  const CHAT_ID = 'YOUR_CHAT_ID';
+  const name = document.getElementById('name').value;
+  const department = document.getElementById('department').value;
+  const password = document.getElementById('password').value;
+  
+  if (password === '12345') {
+    const currentTime = new Date().toLocaleString();
+    const message = `${name} dari ${department} telah hadir rapat pada waktu ${currentTime}`;
     
-    // Token Bot Telegram dan ID Chat
-    const token = '6784104621:AAEVRyReTRmVtL_eGnFIZLbYm3FGkI0zF9M';
-    const chatId = '7120969628';
-    
-    // Kirim data ke bot Telegram
-    const message = `username=${nama} telah datang rapat jam ${new Date().toLocaleTimeString()}`;
-    const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${message}`;
-    
-    // Kirim pesan ke bot Telegram
-    fetch(url)
-        .then(response => {
-            if (response.ok) {
-                // Redirect ke halaman terima kasih jika pesan terkirim
-                window.location.href = 'terimakasih.html';
-            } else {
-                alert('Gagal mengirim pesan ke bot Telegram. Silakan coba lagi.');
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('Terjadi kesalahan. Silakan coba lagi.');
-        });
+    fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${message}`)
+      .then(response => {
+        if (response.ok) {
+          window.location.href = 'terimakasih.html';
+        } else {
+          alert('Gagal mengirim data. Silakan coba lagi.');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('Terjadi kesalahan. Silakan coba lagi.');
+      });
+  } else {
+    alert('Password rapat salah. Silakan coba lagi.');
+  }
 });
