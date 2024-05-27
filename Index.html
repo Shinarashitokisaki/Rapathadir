@@ -3,19 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Absen Rapat</title>
-<link rel="stylesheet" href="style.css">
+<title>Hadir Rapat Tim SMS</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <div class="container">
-    <h1>Hadir Rapat Tim SMS</h1>
-    <form id="absenForm">
-        <label for="nama">Nama:</label>
-        <input type="text" id="nama" name="nama" required>
-        <label for="password">Password Rapat:</label>
-        <input type="password" id="password" name="password" required>
-        <button type="submit">Absen</button>
-    </form>
+  <h1>Hadir Rapat Tim SMS</h1>
+  <form id="attendance-form">
+    <label for="name">Nama:</label>
+    <input type="text" id="name" name="name" required>
+    <label for="department">Bidang:</label>
+    <input type="text" id="department" name="department" required>
+    <label for="password">Password Rapat:</label>
+    <input type="password" id="password" name="password" required>
+    <button type="submit" id="submit-btn">Kirim</button>
+  </form>
 </div>
 <script src="script.js"></script>
 </body>
